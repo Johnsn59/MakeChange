@@ -11,7 +11,7 @@ namespace MakeChange
         static void Main(string[] args)
         {
 
-            double purchasePrice = GetPurchaseAmount();            
+            double purchasePrice = GetPurchasePrice();            
 
             Console.Write("Payment Amount: ");
             double paymentAmount = double.Parse(Console.ReadLine());
@@ -60,9 +60,9 @@ namespace MakeChange
             Console.WriteLine($"Pennies: {pennies}");
 
         }// End of Main
-        static double GetPurchaseAmount()
+        static double GetPurchasePrice()
         {
-            Console.Write("Purchase Amount: ");
+            Console.Write("Purchase Price: ");
             double purchasePrice;
             purchasePrice = double.Parse(Console.ReadLine());
             return purchasePrice;
