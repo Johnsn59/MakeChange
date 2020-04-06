@@ -11,15 +11,14 @@ namespace MakeChange
         static void Main(string[] args)
         {
 
-            double purchasePrice = GetPurchasePrice();            
+            double purchasePrice = GetPurchasePrice();
 
-            Console.Write("Payment Amount: ");
-            double paymentAmount = double.Parse(Console.ReadLine());
+            double paymentAmount = GetPaymentAmount();
 
             double changeDue = paymentAmount - purchasePrice;
             Console.WriteLine($"Change Due: ${changeDue}");
             changeDue += 0.000001;
-            
+
             // How Many $20s
             int twenties = (int)(changeDue / 20);
             Console.WriteLine($"Twenties: {twenties}");
@@ -67,5 +66,12 @@ namespace MakeChange
             purchasePrice = double.Parse(Console.ReadLine());
             return purchasePrice;
         }
-    
+        static double GetPaymentAmount()
+        {
+            Console.Write("Payment Amount: ");
+            double paymentAmount = double.Parse(Console.ReadLine());
+            return paymentAmount;
+
+        }
+    }
 }
